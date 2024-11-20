@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelsCloud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            width: 100px; /* Logo más pequeño */
+            margin: 0 auto 20px;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333; /* Color solicitado */
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 15px; /* Tamaño compacto */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .review-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .review-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .star.selected {
+            color: #FFD700; 
+        }
+        .comment-box {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons-container button {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="images/LOGO.png" alt="Logo HotelsCloud" class="logo">
+
+        <!-- Título -->
+        <h2 class="title">Déjanos tu opinión</h2>
+        <p>Por favor, selecciona tu calificación de 1 a 5 estrellas y escribe tus comentarios.</p>
+
+        <!-- Sección de estrellas -->
+        <div class="review-section">
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+
+            <!-- Caja de texto -->
+            <textarea class="comment-box" placeholder="Escribe tu comentario aquí..."></textarea>
+
+            <!-- Botones -->
+            <div class="buttons-container">
+                <button class="button">Enviar</button>
+                <button type="button" class="button" style="background-color: gray;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Manejo de selección de estrellas
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                // Quitar selección previa
+                stars.forEach(s => s.classList.remove('selected'));
+
+                // Añadir selección hasta la estrella actual
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('selected');
+                }
+
+                // Obtener valor seleccionado
+                const rating = star.getAttribute('data-value');
+                console.log(`Valor seleccionado: ${rating} estrellas`);
+            });
+        });
+    </script>
+</body>
+</html>

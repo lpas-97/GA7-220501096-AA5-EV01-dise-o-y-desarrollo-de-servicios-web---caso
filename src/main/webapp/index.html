@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelsCloud</title>
+    <link rel="stylesheet" href="Estilo.css"> <!-- Correcta referencia al CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .content img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 24px; /* Reducido tamaño de la fuente */
+            margin-bottom: 20px;
+        }
+
+        .options {
+            margin: 30px 0;
+        }
+
+        .options button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .options button:hover {
+            background-color: #eaf4ff;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="images/LOGO.png" alt="Logo HotelsCloud"> <!-- Correcta referencia a la imagen -->
+    
+        
+        <div class="options">
+            <!-- Redirección al Administrador -->
+            <button onclick="location.href='Principal.html';">Administrador</button>
+        </div>
+
+        <div class="options">
+            <!-- Redirección a la página de Clientes -->
+            <button onclick="location.href='PrincipalClientes.html';">Clientes</button>
+        </div>
+    </div>
+</body>
+</html>

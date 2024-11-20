@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelsCloud - Inicio</title>
+    <link rel="stylesheet" href="css/Estilo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .buttons button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 150px;
+            border: none;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Central Content -->
+        <img src="images/LOGO.png" alt="Logo HotelsCloud">
+        <h1>Bienvenido a HotelsCloud</h1>
+        <p>Aquí puedes gestionar tus reservas y servicios de hotel fácilmente.</p>
+        <div class="buttons">
+            <!-- Botón para redirigir al registro de administrador -->
+            <button onclick="location.href='AdministradorRegistrate.html';">Regístrate</button>
+            <!-- Botón para redirigir a la página de inicio de sesión del administrador -->
+            <button onclick="location.href='AdministradorInicioSesion.html';">Inicia Sesión</button>
+        </div>
+    </header>
+</body>
+</html>
